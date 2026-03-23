@@ -1,0 +1,106 @@
+.stories-section {
+  background: var(--sand-light);
+  padding: var(--section-pad);
+}
+
+.stories-header {
+  margin-bottom: 3.5rem;
+}
+.stories-header .section-title em { color: var(--sage); font-style:italic; }
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.story-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.4s;
+}
+
+.story-card.playing { box-shadow: 0 24px 70px rgba(107,143,113,0.25); }
+
+.story-player-wrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #1a2a1a;
+}
+
+.story-play-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(26,42,26,0.45);
+  backdrop-filter: blur(2px);
+  transition: opacity 0.35s;
+  color: white;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.story-play-hint.hidden { opacity: 0; pointer-events: none; }
+
+.play-circle {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(107,143,113,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.story-meta {
+  padding: 1.5rem;
+}
+
+.story-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.story-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.story-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: white;
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.story-author strong { display: block; font-size: 0.85rem; color: var(--ink); }
+.story-author span { display: block; font-size: 0.72rem; color: var(--mist); }
+
+@media (max-width: 900px) {
+  .stories-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .stories-grid { grid-template-columns: 1fr; }
+}
