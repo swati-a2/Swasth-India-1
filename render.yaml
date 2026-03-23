@@ -1,0 +1,19 @@
+# Swasth India — Render Backend
+
+This `render.yaml` tells Render how to deploy the Express API.
+See: https://render.com/docs/render-yaml
+
+services:
+  - type: web
+    name: swasth-india-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: MONGO_URI
+        sync: false          # Set this in Render dashboard
+      - key: CLIENT_ORIGIN
+        sync: false          # Set this to your Vercel URL

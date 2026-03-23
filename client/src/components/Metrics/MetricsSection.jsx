@@ -4,7 +4,7 @@ import { Animate } from 'react-move';
 const easeExpOut = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 import './MetricsSection.css';
 
-const API = 'http://localhost:5001/api/metrics';
+const API = `${import.meta.env.VITE_API_BASE || 'http://localhost:5001'}/api/metrics`;
 
 const FALLBACK = [
   { label:'Lives Touched', display:'10M+', value:10, unit:'M+', description:'Members supported across India' },

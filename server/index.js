@@ -13,7 +13,13 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/swasth_india';
 
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+const ALLOWED_ORIGINS = [
+  'http://localhost:5173',
+  'http://localhost:4173',
+  process.env.CLIENT_ORIGIN, // e.g. https://swasth-india-1.vercel.app
+].filter(Boolean);
+
+app.use(cors({ origin: ALLOWED_ORIGINS, credentials: true }));
 app.use(express.json());
 
 app.use('/api/providers', providersRouter);

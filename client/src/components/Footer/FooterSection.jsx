@@ -21,7 +21,7 @@ export default function FooterSection() {
     e.preventDefault();
     setLoading(true);
     try {
-      await fetch('http://localhost:5001/api/leads', {
+      await fetch(`${import.meta.env.VITE_API_BASE || 'http://localhost:5001'}/api/leads`, {
         method:'POST',
         headers:{ 'Content-Type':'application/json' },
         body: JSON.stringify({ ...formData, message:'Website lead form' }),

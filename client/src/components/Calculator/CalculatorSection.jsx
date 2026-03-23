@@ -4,7 +4,7 @@ import { Animate } from 'react-move';
 const easeExpOut = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 import './CalculatorSection.css';
 
-const API = 'http://localhost:5001/api/calculator';
+const API = `${import.meta.env.VITE_API_BASE || 'http://localhost:5001'}/api/calculator`;
 
 const PLAN_LABELS = { basic: 'Basic', standard: 'Standard', premium: 'Premium' };
 const PLAN_COLORS = { basic: '#8FB097', standard: '#6B8F71', premium: '#4A7C55' };
