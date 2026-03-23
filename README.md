@@ -1,6 +1,6 @@
-# 🌸 Swasth India
+ Swasth India
 
-**A premium full-stack MERN healthcare platform** focused on women's health and maternal wellness in India.
+A premium full-stack MERN healthcare platform** focused on women's health and maternal wellness in India.
 
 [![Live Demo](https://img.shields.io/badge/Live-Vercel-black?logo=vercel)](https://swasth-india-1.vercel.app)
 [![Backend](https://img.shields.io/badge/API-Render-46E3B7?logo=render)](https://swasth-india-api.onrender.com/api/health)
@@ -8,7 +8,7 @@
 
 ---
 
-## ✨ Features
+ Features
 
 | Section | Description |
 |---|---|
